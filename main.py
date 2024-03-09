@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests
-import plotly.express as px
+import plotly.express
 
 # ---- BASE ----
 
@@ -22,6 +22,7 @@ def APIRequest(moedaMain, moedaCheck, periodoCotacao):
             cambioMoedas.append(moedaReq[-4:-1])
     
     bidsTransp = np.array(bids).T
+    bidsTransp_df = np.array(bids)
     bidsFormatFloat = bidsTransp.astype(np.float32)
         
     with st.container():
@@ -29,12 +30,10 @@ def APIRequest(moedaMain, moedaCheck, periodoCotacao):
             bidsFormatFloat,
             columns=cambioMoedas)
         
-        chart_data_fig = px.line(chart_data, markers=True)
+        chart_data_fig = plotly.express.line(chart_data, markers=True)
         chart_data_fig.update_layout(xaxis_title="Dias", yaxis_title="Valor")
 
         st.subheader(f"\nGráfico em relação a: {moedaMain}")
-        st.line_chart(chart_data)
-        st.bar_chart(chart_data)
         st.plotly_chart(chart_data_fig)
 
 with st.container():
