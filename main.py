@@ -8,7 +8,7 @@ import plotly.express
 
 st.set_page_config(page_title="Coin Viewer")
 
-# ---- FUNCTIONS ----
+# --------------
 
 def APIRequest(moedaMain, moedaCheck, periodoCotacao):
     bids = []
@@ -16,6 +16,10 @@ def APIRequest(moedaMain, moedaCheck, periodoCotacao):
     for moedaReq in moedaCheck:
         if moedaReq != moedaMain:
             link = f"https://economia.awesomeapi.com.br/json/daily/{moedaReq[-4:-1]}-{moedaMain[-4:-1]}/{periodoCotacao}"
+
+            # This project uses the Awesome API (https://docs.awesomeapi.com.br/) to retrieve currency quotes.
+            # For more details and terms of use, please refer to their website.
+
             req = requests.get(link)
             resForm = req.json()
             bids.append([cambioRes['bid'] for cambioRes in resForm])
