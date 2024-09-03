@@ -1,16 +1,16 @@
-# Coin_viewer
+# Coin Viewer
 
 ## A Website to View Currency Quotes
 
-<p align="center">
+<p>
   <a href="https://coinviewer-diogooike.streamlit.app/">
-    <img src="https://img.shields.io/badge/-Visit%20Project-blue?style=for-the-badge">
+    <img src="https://img.shields.io/badge/-Visit%20Project-green?style=for-the-badge">
   </a>
 </p>
 
 ### 📑 Project Overview
 
-Coin_viewer is a web application designed to provide users with real-time currency quotes. The project leverages the power of Python and various data analysis libraries to present currency data in an accessible and interactive format.
+Coin viewer is a web application designed to provide users with real-time currency quotes. The project leverages the power of Python and various data analysis libraries to present currency data in an accessible and interactive format.
 
 ### 🚀 Features
 
@@ -56,7 +56,7 @@ To run this project locally, follow these steps:
 
 ### 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 ### 🙌 Acknowledgements
 
