@@ -1,64 +1,169 @@
-# Coin Viewer
+# Coin Viewer - Binance Edition
 
-## A Website to View Currency Quotes
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-<p>
-  <a href="https://coinviewer-diogooike.streamlit.app/">
-    <img src="https://img.shields.io/badge/-Visit%20Project-green?style=for-the-badge">
-  </a>
-</p>
+Aplicativo web interativo para visualização de cotações de criptomoedas em tempo real usando a API da Binance.
 
-### 📑 Project Overview
+---
 
-Coin viewer is a web application designed to provide users with real-time currency quotes. The project leverages the power of Python and various data analysis libraries to present currency data in an accessible and interactive format.
+![Menu](assets/Menu.png)
 
-### 🚀 Features
+---
 
-- **Real-time Currency Data:** Fetches up-to-date currency quotes using the [Awesome API](https://docs.awesomeapi.com.br/).
-- **Data Visualization:** Utilizes Plotly to create interactive and dynamic graphs.
-- **Easy-to-Use Interface:** Built with [Streamlit](https://streamlit.io/) to provide a seamless user experience.
+## Índice
 
-### 🛠️ Technologies Used
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Principais Funcionalidades](#principais-funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Como Usar](#como-usar)
+- [Configuração](#configuração)
+- [Licença](#licença)
+- [Contato](#contato)
 
-- ![Python](https://img.shields.io/badge/Python-59D8D8?style=for-the-badge&logo=python)
-- ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=blue)
-- ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=Pandas&logoColor=blue)
-- ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=Plotly&logoColor=green)
-- ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+## Sobre o Projeto
 
-### 📚 How It Works
+O **Coin Viewer** é uma aplicação desenvolvida em Python com Streamlit que permite acompanhar as principais criptomoedas do mercado em tempo real. O projeto utiliza a API pública da Binance para obter dados históricos e atualizados de preços, oferecendo uma interface limpa e intuitiva para análise de tendências.
 
-1. **Data Fetching:** The app retrieves currency data using the [Awesome API](https://docs.awesomeapi.com.br/).
-2. **Data Processing:** Data is cleaned and organized with [Pandas](https://pandas.pydata.org/) and [NumPy](https://numpy.org/).
-3. **Visualization:** The processed data is visualized using [Plotly](https://plotly.com/), which allows users to interact with the charts directly within the app.
-4. **User Interface:** The web interface is created using [Streamlit](https://streamlit.io/), enabling a user-friendly experience with minimal code.
+- **Gratuito**: Utiliza a API pública da Binance, sem necessidade de credenciais
+- **Tempo Real**: Dados atualizados diretamente da maior exchange de criptomoedas do mundo
+- **Intuitivo**: Interface amigável desenvolvida com Streamlit
+- **Flexível**: Permite comparar múltiplas moedas e configurar diferentes intervalos de tempo
+- **Leve**: Não requer instalação complexa, apenas Python e algumas bibliotecas
 
-### 🔧 Setup and Installation
+## Principais Funcionalidades
 
-To run this project locally, follow these steps:
+- **Visualização de Múltiplas Criptomoedas**: Compare BTC, ETH, BNB, XRP, ADA, SOL e mais
+- **Intervalos Personalizáveis**: Escolha entre intervalos de 1 hora, 4 horas ou 1 dia
+- **Histórico Extenso**: Analise até 365 dias de dados históricos
+- **Gráficos Interativos**: Gráficos responsivos com Plotly (zoom, pan, hover)
+- **Estatísticas em Tempo Real**: Preço atual e variação percentual
+- **Diferentes Moedas Base**: Visualize cotações em USDT, BTC, ETH ou BUSD
+- **Interface Responsiva**: Layout adaptável para diferentes tamanhos de tela
+- **Barra de Progresso**: Feedback visual durante carregamento dos dados
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/coin_viewer.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd coin_viewer
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
+## Tecnologias Utilizadas
 
-### 📄 License
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
+- [Python 3.8+](https://www.python.org/) - Linguagem de programação
+- [Streamlit](https://streamlit.io/) - Framework para criação de aplicações web
+- [Binance API](https://binance-docs.github.io/apidocs/) - API para dados de criptomoedas
+- [Plotly](https://plotly.com/python/) - Biblioteca para gráficos interativos
+- [Pandas](https://pandas.pydata.org/) - Manipulação e análise de dados
+- [Python-Binance](https://python-binance.readthedocs.io/) - Cliente Python para API Binance
 
-### 🙌 Acknowledgements
+## Instalação
 
-- [Awesome API](https://docs.awesomeapi.com.br/) for providing the currency quotes.
-- [Streamlit](https://streamlit.io/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), and [Plotly](https://plotly.com/) for the tools and libraries used in this project.
+### Pré-requisitos
+
+Antes de começar, você precisa ter instalado em sua máquina:
+
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
+- Git (opcional, para clonar o repositório)
+
+### Passo a Passo
+
+1. **Clone o repositório** (ou faça download do código)
+
+```bash
+git clone https://github.com/seu-usuario/coin-viewer.git
+cd coin-viewer
+```
+
+2. **Crie um ambiente virtual** (recomendado)
+
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux/Mac
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Instale as dependências**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Execute a aplicação**
+
+```bash
+streamlit run coin_viewer_final.py
+```
+
+5. **Acesse no navegador**
+
+A aplicação abrirá automaticamente em `http://localhost:8501`
+
+## Como Usar
+
+### Interface Básica
+
+1. **Selecione a moeda base** (coluna esquerda)
+   - Escolha em qual moeda deseja ver os preços (USDT, BTC, ETH, BUSD)
+
+2. **Escolha o intervalo de tempo** (coluna esquerda)
+   - Defina o intervalo entre cada ponto no gráfico (1h, 4h, 1d)
+
+3. **Selecione as criptomoedas** (coluna direita)
+   - Escolha uma ou mais moedas para comparar
+   - Por padrão, Bitcoin e Ethereum já vêm selecionados
+
+4. **Ajuste o período** (coluna direita)
+   - Use o slider para definir quantos dias de histórico visualizar (1 a 365 dias)
+
+5. **Clique em "Visualizar Cotações"**
+   - Aguarde o carregamento dos dados
+   - Analise o gráfico e as estatísticas
+
+## Configuração
+
+### Usando API Keys da Binance (Opcional)
+
+Para funcionalidades avançadas ou limites maiores de requisições:
+
+1. **Crie uma conta na Binance** (se ainda não tiver)
+   - Acesse: https://www.binance.com/
+
+2. **Gere suas API Keys**
+   - Faça login na Binance
+   - Vá em "Gerenciamento de API"
+   - Crie uma nova API Key
+   - **IMPORTANTE**: NÃO habilite permissões de trading, apenas leitura
+
+Adicione suas credenciais:
+
+```env
+API_KEY=sua_api_key_aqui
+API_SECRET=sua_api_secret_aqui
+```
+
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+### Sobre a API Binance
+
+Este projeto utiliza a API pública da Binance. Certifique-se de seguir os [Termos de Uso da Binance](https://www.binance.com/en/terms).
+
+---
+
+## Agradecimentos
+
+- [Binance](https://www.binance.com/) - Por fornecer a API pública
+- [Streamlit](https://streamlit.io/) - Framework incrível para criar aplicações web
+- [Plotly](https://plotly.com/) - Biblioteca de visualização de dados
+- Comunidade Python - Pelo suporte e bibliotecas open source
+
+---
+
+**Desenvolvido com ❤️ usando Python e Streamlit**
+
+Se este projeto foi útil para você, considere dar uma ⭐!
