@@ -22,11 +22,10 @@ def get_binance_client():
     try:
         API_KEY = os.getenv("API_KEY", "")
         API_SECRET = os.getenv("API_SECRET", "")
-        
-        if API_KEY and API_SECRET:
-            return Client(API_KEY, API_SECRET)
-        else:
-            return Client()  # Cliente público
+        # if API_KEY and API_SECRET:
+        #     return Client(API_KEY, API_SECRET)
+        # else:
+        return Client()  # Cliente público
     except Exception as e:
         st.error(f"Erro ao inicializar cliente Binance: {e}")
         return None
